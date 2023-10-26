@@ -1,0 +1,92 @@
+[user]
+    name            = Hédic
+    email           = guiberthedic@gmail.com
+[alias]
+    st              = status
+    ci              = commit -v
+    cim             = commit -vm
+    co              = checkout
+    br              = branch -v
+    bra             = branch -v -a
+	brc             = ! git branch --no-color --merged | /bin/grep -v '*' | /bin/grep -v master | /bin/grep -v main | /bin/grep -v develop | xargs --no-run-if-empty git branch -d
+    brcc            = ! git br | rg --fixed-strings '[gone]' | awk '{ print $1 }' | xargs --no-run-if-empty git br -D
+    lg              = log --graph --pretty=tformat:'%Cred%h%Creset -%C(cyan)%d %Creset%s %Cgreen(%an %cr)%Creset' --abbrev-commit
+    lga             = log --graph --pretty=tformat:'%Cred%h%Creset -%C(cyan)%d %Creset%s %Cgreen(%an %cr)%Creset' --abbrev-commit --all
+    di              = diff -M
+    sdi             = diff --cached -M
+    dis             = diff --ignore-all-space -M
+    ditool          = difftool -y
+    cat             = cat-file -p
+    unstage         = reset HEAD
+    uncommit        = update-ref HEAD HEAD^
+    uncommithard    = reset --hard HEAD^
+    oups            = commit --amend -C HEAD
+    rebc            = rebase --continue
+    rebt            = rebase --abort
+    rebs            = rebase --skip
+    chp             = cherry-pick
+    chpc            = cherry-pick --continue
+    chpa            = cherry-pick --abort
+    chps            = cherry-pick --skip
+    new             = ! git checkout origin/master -b $(echo "$@" | slug) && echo $@ >/dev/null
+    php-lint        = ! cd -- ${GIT_PREFIX:-.} && git status --short | /bin/grep -e '^[AUM ][UM ].*\\.php$' | awk '{print $2}' | xargs --no-run-if-empty -L 1 php -l
+    php-cs-fixer    = ! cd -- ${GIT_PREFIX:-.} && git status --short | /bin/grep -e '^[AUM ][UM ].*\\.php$' | awk '{print $2}' | xargs --no-run-if-empty -L 1 php $(which php-cs-fixer) fix --quiet
+    eslint          = ! cd -- ${GIT_PREFIX:-.} && git status --short | /bin/grep -e '^[AUM ][UM ].*\\.\\(js\\|jsx\\|ts\\|tsx\\)$' | awk '{print $2}' | xargs --no-run-if-empty -L 1 eslint --fix
+    notes-fetch     = fetch origin refs/notes/*:refs/notes/*
+    notes-push      = push origin refs/notes/*
+    daily           = log --no-merges --all --author='Hédic Guibert' --since='midnight yesterday' --format='%s'
+    reopen          = ! git diff-tree --no-commit-id -r ${1:-HEAD} | cut -d ' ' -f 5-6 | /bin/grep -v "^D" | awk '{print $2}' | xargs --no-run-if-empty code
+    reopens         = ! "f() { git log -1 --format= --name-only --grep=$1 | xargs --no-run-if-empty code ;}; f"
+    open            = ! git status -s | /bin/grep -v "^D" | awk '{print $2}' | xargs --no-run-if-empty code
+    shows           = log -1 --format= -p --grep
+    ignored         = ! git ls-files -v | /bin/grep '^[[:lower:]]'
+	forcepush       = push --force-with-lease --force-if-includes
+[color]
+    ui              = true
+    [status]
+        added       = 10
+        changed     = 10
+        untracked   = 14
+        deleted     = 9
+        conflicted  = 9
+[core]
+    autocrlf        = input
+    pager           = less
+    editor          = code --wait
+	excludesfile    = /home/hedic/.gitignore
+[branch]
+    autosetupmerge  = false
+    rebase          = true
+[merge]
+    summary         = true
+    tool = vscode
+[rerere]
+    enabled         = 1
+[github]
+    user            = HedicGuibert
+[push]
+    default         = tracking
+    autoSetupRemote = true
+[include]
+    path            = ~/.private-gitconfig
+[init]
+    templatedir     = ~/.git-template
+    defaultBranch = main
+[status]
+    showUntrackedFiles = all
+[fetch]
+    prune = true
+[tag]
+    sort = version:refname
+[remote "origin"]
+#    fetch = +refs/pull/*:refs/remotes/origin/pull/*
+# [remote "upstream"]
+#     fetch = +refs/pull/*:refs/remotes/upstream/pull/*
+[pull]
+    rebase = true
+[help]
+    autocorrect = 1
+[diff]
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE

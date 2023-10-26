@@ -1,0 +1,151 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "One Dark Vivid",
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "name": "One Dark italic",
+                "scope": [
+                    "comment",
+                    "entity.other.attribute-name",
+                    "keyword",
+                    "markup.underline.link",
+                    "storage.modifier",
+                    "storage.type",
+                    "string.url",
+                    "variable.language.super",
+                    "variable.language.this"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "One Dark italic reset",
+                "scope": [
+                    "keyword.operator",
+                    "keyword.other.type",
+                    "storage.modifier.import",
+                    "storage.modifier.package",
+                    "storage.type.built-in",
+                    "storage.type.function.arrow",
+                    "storage.type.generic",
+                    "storage.type.java",
+                    "storage.type.primitive"
+                ],
+                "settings": {
+                    "fontStyle": ""
+                }
+            },
+            {
+                "scope": "punctuation",
+                "settings": {
+                    "foreground": "#ABB2BF"
+                }
+            },
+            {
+                "scope": "keyword.operator",
+                "settings": {
+                    "foreground": "#61AFEF",
+                }
+            }
+        ]
+    },
+    "editor.quickSuggestions": {
+        "comments": true
+    },
+    "intelephense.files.exclude": [
+        "**/.git/**",
+        "**/.svn/**",
+        "**/.hg/**",
+        "**/CVS/**",
+        "**/.DS_Store/**",
+        "**/node_modules/**",
+        "**/bower_components/**",
+        "**/.history/**"
+    ],
+    "emmet.includeLanguages": {
+        "twig": "html"
+    },
+    "[php]": {
+        "editor.defaultFormatter": "mansoorkhan96.php-cs-fixer",
+        "editor.formatOnSave": true
+    },
+    "[javascript]": {
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true
+    },
+    "[typescript]": {
+        "editor.tabSize": 2,
+    },
+    "[javascriptreact]": {
+        "editor.tabSize": 2,
+    },
+    "editor.suggest.showStatusBar": true,
+    "window.titleBarStyle": "custom",
+    "window.customMenuBarAltFocus": false,
+    "editor.suggestSelection": "first",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "workbench.editor.untitled.hint": "hidden",
+    "html.format.indentInnerHtml": true,
+    "twig-language-2.bracePadding": true,
+    "javascript.format.semicolons": "insert",
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+    "typescript.format.insertSpaceAfterTypeAssertion": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+      },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "workbench.editorAssociations": {
+        "*.smile": "default",
+        "git-rebase-todo": "default"
+    },
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false,
+        "yaml": true
+    },
+    "editor.fontFamily": "'monospace', monospace",
+    "git.mergeEditor": false,
+    "files.insertFinalNewline": true,
+    "extensions.ignoreRecommendations": true,
+    "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
+    "emmet.excludeLanguages": [
+        "markdown",
+        "php",
+        "javascript"
+    ],
+    "search.useIgnoreFiles": false,
+    "intelephense.files.associations": [
+        "*.php",
+        "*.phtml"
+    ],
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "php-cs-fixer.autoFixByBracket": false,
+    "php-cs-fixer.formatHtml": true,
+    "php-cs-fixer.onsave": true,
+    "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+    "intelephense.completion.fullyQualifyGlobalConstantsAndFunctions": true,
+    "oneDark.italic": false,
+    "path-intellisense.absolutePathToWorkspace": false,
+    "oneDark.bold": true,
+    "path-intellisense.autoSlashAfterDirectory": true,
+    "php-cs-fixer.config": ".php-cs-fixer.php",
+    "git.openRepositoryInParentFolders": "always",
+    "php.suggest.basic": false,
+    "workbench.editor.empty.hint": "hidden",
+    "files.autoSave": "onFocusChange",
+    "files.autoSaveDelay": 0,
+}
+
