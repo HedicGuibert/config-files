@@ -1,17 +1,16 @@
-Better Comments  
-EditorConfig for VS Code  
-ESLint  
-GitLens - Git supercharged  
-HTML CSS Support  
-JSON Crack  
-Material Icon Theme  
-NGINX Configuration Language  
-One Dark Theme  
-Path Intellisense  
-PHP CS Fixer  
-PHP Getters and Setters  
-PHP Intelephense  
-PHP Namespace Resolver  
-Trailing Whitespace  
-Twig Language 2  
-Twig link resolver  
+editorconfig.editorconfig  
+dbaeumer.vscode-eslint  
+eamodio.gitlens  
+ecmel.vscode-html-css  
+pkief.material-icon-theme  
+ahmadalli.vscode-nginx-conf  
+mskelton.one-dark-theme  
+christian-kohler.path-intellisense  
+mansoorkhan96.php-cs-fixer  
+cvergne.vscode-php-getters-setters-cv  
+bmewburn.vscode-intelephense-client  
+mehedidracula.php-namespace-resolver  
+jkiviluoto.tws  
+mblode.twig-language-2  
+chaxwell.twig-link-resolver  
+wayou.vscode-todo-highlight  
