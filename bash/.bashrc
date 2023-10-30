@@ -21,7 +21,10 @@ export HISTFILESIZE=${HISTSIZE}
 export HISTIGNORE="ls:cd:[bf]g:exit"
 export HISTCONTROL=ignoreboth # don't put duplicate lines or lines starting with space in the history.
 
-export LESS="FRSX"
+export LESS="FRS"
+
+FZF_DEFAULT_COMMAND="fd --type f"
+FZF_DEFAULT_OPTS="--preview 'bat --color=always {}'"
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -86,22 +89,14 @@ alias lfa='ls -lFa'
 alias open='xdg-open'
 alias chmod='sudo chmod -c'
 alias chown='sudo chown -c'
+alias find='fdfind'
+alias cd='z'
 
 alias godev='cd /home/hedic/Dev/'
 alias goperso='cd /home/hedic/Dev/perso'
 alias gojoli='cd /home/hedic/Dev/JoliCode/'
 
-alias sf='symfony'
-alias ssf='sudo symfony'
-alias sfc='symfony console'
-alias ssfc='sudo symfony console'
-
-alias doc='docker'
-alias sdoc='sudo docker'
-
-alias fixer='php-cs-fixer'
 alias docc='docker-compose'
-alias sdocc='sudo docker-compose'
 
 alias cas='castor'
 
@@ -115,4 +110,9 @@ fi
 
 source /usr/share/bash-completion/completions/git
 
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+
 eval "$(starship init bash)"
+eval "$(zoxide init bash)"
+eval "$(atuin init bash)"
+

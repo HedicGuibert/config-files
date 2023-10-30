@@ -16,13 +16,22 @@ if [ ! -d `~/.config` ]; then
   mkdir ~/.config
 fi
 
-echo 'Installing the needed softwares'
 curl -sS https://starship.rs/install.sh | sudo sh
 touch ~/.config/starship.toml
 
 dconf load /org/gnome/terminal/ < $DOTFILES/bash/gnome-terminal.properties
 
-echo 'Creating the simlinks'
+bash <(curl https://raw.githubusercontent.com/atuinsh/atuin/main/install.sh)
+sudo apt install -y fzf
+sudo apt install -y bat
+sudo apt install -y fd-find
+sudo apt install -y tldr
+sudo apt install -y zoxide
+
+atuin register -u hedic -e guiberthedic@gmail.com
+atuin import auto
+atuin sync
+
 cat $DOTFILES/git/.gitconfig > ~/.gitconfig
 ln -sf $DOTFILES/git/.gitconfig ~/.gitconfig
 
@@ -50,7 +59,6 @@ ln -sf $DOTFILES/vscode/settings.json ~/.config/Code/User/settings.json
 cat $DOTFILES/vscode/keybindings.json > ~/.config/Code/User/keybindings.json
 ln -sf $DOTFILES/vscode/keybindings.json ~/.config/Code/User/keybindings.json
 
-echo 'Installing VSCode plugins'
 while IFS="" read -r extension || [ -n "$extension" ]
 do
   code --install-extension $extension

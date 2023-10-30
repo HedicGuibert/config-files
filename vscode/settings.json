@@ -114,7 +114,7 @@
         "scminput": false,
         "yaml": true
     },
-    "editor.fontFamily": "'monospace', monospace",
+    "editor.fontFamily": "Roboto",
     "git.mergeEditor": false,
     "files.insertFinalNewline": true,
     "extensions.ignoreRecommendations": true,

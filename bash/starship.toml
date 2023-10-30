@@ -1,4 +1,5 @@
 format = """
+$username\
 $shlvl\
 $singularity\
 $directory\
