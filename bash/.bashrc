@@ -16,6 +16,10 @@ shopt -s extglob
 shopt -s nocaseglob
 shopt -s hostcomplete
 
+# Ignore case for tab autocompletion
+if [ ! -a ~/.inputrc ]; then echo '$include /etc/inputrc' > ~/.inputrc; fi
+echo 'set completion-ignore-case On' >> ~/.inputrc
+
 export HISTSIZE=50000
 export HISTFILESIZE=${HISTSIZE}
 export HISTIGNORE="ls:cd:[bf]g:exit"
