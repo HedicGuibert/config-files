@@ -1,3 +1,16 @@
+format = """
+$hostname\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$docker_context\
+$memory_usage\
+$cmd_duration\
+$character"""
+
 "$schema" = 'https://starship.rs/config-schema.json'
 add_newline = true
 
@@ -25,6 +38,7 @@ disabled = false
 
 [git_metrics]
 format = '[+$added](bright-green)/[-$deleted](bright-red) '
+only_nonzero_diffs=true
 disabled = false
 
 [git_state]

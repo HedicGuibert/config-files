@@ -11,6 +11,6 @@ cvergne.vscode-php-getters-setters-cv
 bmewburn.vscode-intelephense-client  
 mehedidracula.php-namespace-resolver  
 jkiviluoto.tws  
-mblode.twig-language-2  
 chaxwell.twig-link-resolver  
-wayou.vscode-todo-highlight  
+stanislav.vscode-twig
+moetelo.twiggy

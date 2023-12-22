@@ -91,15 +91,14 @@
         "**/.settings": true,
         "**/.factorypath": true
     },
-    "workbench.editor.untitled.hint": "hidden",
     "html.format.indentInnerHtml": true,
     "twig-language-2.bracePadding": true,
     "javascript.format.semicolons": "insert",
     "typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
     "typescript.format.insertSpaceAfterTypeAssertion": true,
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-      },
+        "source.fixAll.eslint": "explicit"
+    },
     "diffEditor.ignoreTrimWhitespace": false,
     "javascript.updateImportsOnFileMove.enabled": "always",
     "workbench.editorAssociations": {
@@ -114,7 +113,7 @@
         "scminput": false,
         "yaml": true
     },
-    "editor.fontFamily": "Roboto",
+    "editor.fontFamily": "'Monaspace',Monospace",
     "git.mergeEditor": false,
     "files.insertFinalNewline": true,
     "extensions.ignoreRecommendations": true,
@@ -137,15 +136,17 @@
     "php-cs-fixer.onsave": true,
     "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
     "intelephense.completion.fullyQualifyGlobalConstantsAndFunctions": true,
-    "oneDark.italic": false,
     "path-intellisense.absolutePathToWorkspace": false,
-    "oneDark.bold": true,
     "path-intellisense.autoSlashAfterDirectory": true,
-    "php-cs-fixer.config": ".php-cs-fixer.php",
+    "php-cs-fixer.config": ".php-cs-fixer.dist.php",
     "git.openRepositoryInParentFolders": "always",
     "php.suggest.basic": false,
     "workbench.editor.empty.hint": "hidden",
     "files.autoSave": "onFocusChange",
     "files.autoSaveDelay": 0,
+    "namespaceResolver.sortAlphabetically": true,
+    "twiggy.phpBinConsoleCommand": "php bin/console debug:twig",
+    "oneDark.bold": true,
+    "oneDark.italic": false,
 }
 

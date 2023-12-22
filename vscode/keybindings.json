@@ -30,6 +30,14 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     {
+        "key": "shift+alt+right",
+        "command": "editor.action.indentLines"
+    },
+    {
+        "key": "shift+alt+left",
+        "command": "editor.action.outdentLines"
+    },
+    {
         "key": "ctrl+1",
         "command": "-workbench.action.focusFirstEditorGroup"
     },
@@ -75,5 +83,43 @@
         "key": "ctrl+shift+l",
         "command": "-editor.action.selectHighlights",
         "when": "editorFocus"
-    }
+    },
+    {
+        "key": "alt+e",
+        "command": "namespaceResolver.expand",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+e",
+        "command": "-namespaceResolver.expand",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+a",
+        "command": "namespaceResolver.generateNamespace",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+g",
+        "command": "-namespaceResolver.generateNamespace",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+z",
+        "command": "namespaceResolver.import",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+i",
+        "command": "-namespaceResolver.import",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+left",
+        "command": "workbench.action.navigateBack"
+    },
+    {
+        "key": "alt+right",
+        "command": "workbench.action.navigateForward"
+    },
 ]
